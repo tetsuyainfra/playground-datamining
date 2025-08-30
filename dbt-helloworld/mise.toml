@@ -1,0 +1,15 @@
+[tools]
+#python = "3.13"
+uv = "latest"
+
+[env]
+_.python.venv = { path = ".venv", create = true, uv_create_args = ['--seed'] }
+
+
+[tasks.install]
+description = "Install dependencies"
+alias = "i"
+run = "uv sync"
+
+[settings]
+idiomatic_version_file_enable_tools = ["python"]
